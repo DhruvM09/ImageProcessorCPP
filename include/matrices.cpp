@@ -15,10 +15,10 @@
     // if inPlace is 1 originale matrix gets modified
     Matrix Matrix::transpose(bool inPlace)
     {
-        vector<vector<float>> newMat(rows, vector<float>(cols));
-        for (ll i = 0; i < rows; i++)
+        vector<vector<float>> newMat(cols, vector<float>(rows));
+        for (ll i = 0; i < cols; i++)
         {
-            for (ll j = 0; j < cols; j++)
+            for (ll j = 0; j < rows; j++)
             {
                 newMat[i][j] = mat[j][i];
             }
@@ -28,7 +28,7 @@
             mat = newMat;
             return NULL_MAT
         }
-        Matrix returnMat = Matrix(rows, cols);
+        Matrix returnMat = Matrix(cols, rows);
         returnMat.mat = newMat;
         return returnMat;
     }

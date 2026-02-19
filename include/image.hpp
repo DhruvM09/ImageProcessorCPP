@@ -15,7 +15,10 @@ class Image{
         }
 
         void makeP3PPM(string filename);
+
+        void dotFilter(Matrix & filter);
         
 
 
 };
+
